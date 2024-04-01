@@ -7,7 +7,7 @@ O Projeto será divido em Etapas, que serão desenvolvidas e publicadas ao longo
 A arquitetura do projeto e ideia foram inspirados no conjunto de aulas de ETL Pipeline do [Programador Lhama](https://www.youtube.com/watch?v=D5mwXMMA0e0&list=PLAgbpJQADBGLuI1oR39tVfELOEZJSSbxQ).
 
 ## Funcionalidade
-### Etapa 1
+### Etapa 1 - Web Scraping
 Essa pipeline realiza a extração de dados de videos do '*Em Alta*' do Youtube, realiza transformação no conjunto de dados e então carrega em um banco de Dados.
 
 * Drivers
@@ -75,11 +75,12 @@ primary key(id)
 Uma vez instalado é necessário configurar a váriavel de ambiente, adicione o diretório onde o driver está localizado à variável de ambiente PATH do seu sistema operacional.
 
 ### Execução
-Por fim, basta executar o arquivo *run.py*
+Por fim, basta acessar o diretório *Etapa 1 - Web Scraping* basta executar o arquivo *run.py*
 
 É esperado que uma aba no firefox seja aberta por 20 segundos para coleta de dados e então fechadado, por fim os dados serão carregados.
 
 ```
+cd Etapa 1 - Web Scraping
 python3 run.py
 ```
 
