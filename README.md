@@ -10,6 +10,9 @@ A arquitetura do projeto e ideia foram inspirados no conjunto de aulas de ETL Pi
 ### Etapa 1 - Web Scraping
 Essa pipeline realiza a extração de dados de videos do '*Em Alta*' do Youtube, realiza transformação no conjunto de dados e então carrega em um banco de Dados.
 
+Diagrama de Classes:
+![alt text](<Etapa 1 - Web Scraping/Diagrama_de_classes_Etapa1.png>)
+
 * Drivers
 
 Local onde os dados do youtube são requisitados, a classe *HttpRequester* faz a requisição, utilizando da biblioteca selenium para abrir o site e então aguardar o carregamento, para recolher todo o html. Em seguida o *HtmlCollector* coleta a informação de interesse do Html, que se refere aos videos.
@@ -19,6 +22,7 @@ Local onde os dados do youtube são requisitados, a classe *HttpRequester* faz a
 O estágio de extração utiliza da classe *ExtractHTML* para fazer a chamada das classes do Drive, e então devolve as dados em um contrato de extração (namedtuple).
 
 * Transformação
+
 O estágio mais complexo, a classe 'TransformHtml' transforma o HTML, coletando as informações relevantes com a biblioteca re: **Titulo**, **Canal**, **Visualizações**, **Tempo de Video**, **Tempo do lançamento**, **Link**, **Data de Extração**. Então é retornado um contrato de transformação.  
 
 * Carga
@@ -26,6 +30,7 @@ O estágio mais complexo, a classe 'TransformHtml' transforma o HTML, coletando 
 O estágio reponsável pela injeção de dados, a classe LoadData utiliza o repositório e connection para inserir o dados ao banco de dados.
 
 * Infra
+
 A classe *DatabaseConnector* é reponsável por fazer a conexão com o banco de dados, e então a *DatabaseRepository* realiza a injeção de dados no banco de dados.
 
 ## Como Usar
