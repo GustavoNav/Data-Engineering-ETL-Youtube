@@ -40,7 +40,7 @@ Primeiro clone o repositório, crie o ambiente virtual, ative o ambiente e insta
 ### Windows
 
 ```
-git clone https://github.com/GustavoNav/ETL-Youtube
+git clone https://github.com/GustavoNav/Data-Engineering-ETL-Youtube
 python3 -m venv nome_do_ambiente
 nome_do_ambiente\Scripts\activate
 pip install -r requirements.txt
