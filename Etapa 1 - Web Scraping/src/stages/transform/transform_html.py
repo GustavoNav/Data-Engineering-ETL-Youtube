@@ -40,6 +40,7 @@ class TransformHtml:
         return transfomed_information
 
     def __collect_title(self, text):
+        match = None
         match = re.search(r'title="([^"]+)"', text)
         if match:
             title = match.group(1)
@@ -48,9 +49,11 @@ class TransformHtml:
         return None
     
     def __collect_channel_name(self, text, title):
-        new_text = text.replace('<a aria-label="'+ title,'').strip()
+        match = None
+        if text != None and title != None:
+            new_text = text.replace('<a aria-label="'+ title,'').strip()
 
-        match = re.search(r'(.*?)\s\d+\.', new_text)
+            match = re.search(r'(.*?)\s\d+\.', new_text)
         if match:
             channel_name = match.group(1)
             return channel_name
@@ -58,6 +61,7 @@ class TransformHtml:
         return None
         
     def __collect_link(self, text):
+        match = None
         match = re.search(r'href="([^"]+)"', text)
         if match:
             href = 'https://www.youtube.com/' + match.group(1)      
@@ -66,14 +70,17 @@ class TransformHtml:
         return None
 
     def __collect_views(self, text):
+        match = None
         match = re.search(r'(\d{1,3}(?:\.\d{3})*(?:,\d+)?) visualizações', text)
         if match:
             views = match.group(1).replace(".", "").replace(",", ".")
+            views = int(views)
             return views
         
         return None
     
     def __collect_video_time(self,text):
+        match = None
         match = re.search(r'time="([^"]+)"', text)
         if match:
             video_time = match.group(1)      
@@ -82,6 +89,7 @@ class TransformHtml:
         return None
     
     def __collect_time_online(self, text):
+        match = None
         match = re.search(r'há (.+ segundos)', text)
         if match:
             time_online = match.group(1)

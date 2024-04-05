@@ -89,6 +89,10 @@ cd Etapa 1 - Web Scraping
 python3 run.py
 ```
 
+### Etapa 2 - Expandindo o Banco de Dados
+Essa etapa tem como objetivo criar um pipeline que coleta informações do banco de dados locais e as utilizada para fazer web scraping, realizar transformações e carregar em uma nova tabela.
+![alt text](<Etapa 2 - Expandindo o Banco de Dados/Diagrama_de_classe_Etapa2.png>)
+
 ## Links Úteis 
 [Python](https://www.python.org/)
 
