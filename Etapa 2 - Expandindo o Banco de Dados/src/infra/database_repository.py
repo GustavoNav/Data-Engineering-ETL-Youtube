@@ -20,11 +20,19 @@ class DatabaseRepository():
     @classmethod
     def select_channel(cls):
         query='''
-                SELECT DISTINCT channel, link
+                SELECT DISTINCT channel
                 FROM videos
             '''
         cursor = DatabaseConnector.connection.cursor()
         cursor.execute(query)
 
         result = cursor.fetchall()
-        return result
+        
+        information = []
+        for tupla in result:
+            channel = str(tupla[0])
+            channel = channel.replace(' ', '')
+            link = 'https://www.youtube.com/' + channel
+            information.append({'channel': channel, 'link': link})
+
+        return information
