@@ -27,7 +27,7 @@ class TransformHtml:
         for data in raw_information:
             transformed_data = {
                 "title": self.__collect_title(data),
-                "channel": self.__collect_channel_name(data, self.__collect_title(data)),
+                "channel": self.__collect_channel_name(data),
                 "link": self.__collect_link(data),
                 "views": self.__collect_views(data),
                 "video_time": self.__collect_video_time(data),
@@ -48,12 +48,10 @@ class TransformHtml:
         
         return None
     
-    def __collect_channel_name(self, text, title):
+    def __collect_channel_name(self, text):
         match = None
-        if text != None and title != None:
-            new_text = text.replace('<a aria-label="'+ title,'').strip()
-
-            match = re.search(r'(.*?)\s\d+\.', new_text)
+        if text != None:
+            match = re.search('" style="text-align: left;" title="([^"]*)"', text)
         if match:
             channel_name = match.group(1)
             return channel_name
@@ -62,9 +60,9 @@ class TransformHtml:
         
     def __collect_link(self, text):
         match = None
-        match = re.search(r'href="([^"]+)"', text)
+        match = re.search('"><a class="yt-simple-endpoint style-scope yt-formatted-string" href="([^"]*)"', text)
         if match:
-            href = 'https://www.youtube.com/' + match.group(1)      
+            href = 'https://www.youtube.com' + match.group(1)      
             return href
         
         return None
@@ -81,7 +79,7 @@ class TransformHtml:
     
     def __collect_video_time(self,text):
         match = None
-        match = re.search(r'time="([^"]+)"', text)
+        match = re.search(r'</div>time="([^"]+)"', text)
         if match:
             video_time = match.group(1)      
             return video_time
@@ -90,7 +88,7 @@ class TransformHtml:
     
     def __collect_time_online(self, text):
         match = None
-        match = re.search(r'há (.+ segundos)', text)
+        match = re.search(r'há (.{1,45} segundos)', text)
         if match:
             time_online = match.group(1)
             return time_online

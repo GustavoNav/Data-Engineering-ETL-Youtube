@@ -5,7 +5,7 @@ class DatabaseConnector:
     '''Classe responsável por fazer a conexão com o Banco de Dados Local'''
     connection = None
     @classmethod
-    def connect(cls):
+    def connect(cls) -> None:
         db_connection = mysql.connect(
             host='localhost',
             port=3306,

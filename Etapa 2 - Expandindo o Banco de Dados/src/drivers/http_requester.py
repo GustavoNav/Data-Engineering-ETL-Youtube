@@ -2,21 +2,21 @@ import time
 import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException
 from .html_collector import HtmlCollector
+from src.drivers.interfaces.http_requester import HttpRequesterInterface
+from src.drivers.interfaces.html_collector import HtmlCollectorInterface
 from src.infra.database_repository import DatabaseRepository
 from src.infra.database_connector import DatabaseConnector
 
-class HttpRequester():
-    def __init__(self) -> None:
-        self.html_collector = HtmlCollector()
+
+class HttpRequester(HttpRequesterInterface):
+    def __init__(self, html_collector: HtmlCollectorInterface) -> None:
+        self.html_collector = html_collector
 
     def request_from_pages(self, urls: list) -> None:
         browser = webdriver.Firefox()
         
-        file = "src/drivers/essential_information.json"
+        file = "src/data/extract_data.json"
         with open(file, "w") as file_json:
             file_json.write('[\n')
 
@@ -29,7 +29,11 @@ class HttpRequester():
                 browser.get(url)
                 time.sleep(3)
 
-                self.__click_button(browser)
+                try:
+                    botao = browser.find_element(By.CLASS_NAME, "style-scope ytd-channel-tagline-renderer")
+                    botao.click()
+                except:
+                    continue
 
                 time.sleep(3)
                 html = browser.page_source
@@ -53,7 +57,3 @@ class HttpRequester():
         urls = database_repository.select_channel()
 
         return urls
-    
-    def __click_button(self, browser) -> None:
-                botao = browser.find_element(By.CLASS_NAME, "style-scope ytd-channel-tagline-renderer")
-                botao.click()

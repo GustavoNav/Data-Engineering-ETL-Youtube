@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
+from src.drivers.interfaces.html_collector import HtmlCollectorInterface
 
-class HtmlCollector:
+class HtmlCollector(HtmlCollectorInterface):
     @classmethod
     def collect_essential_information(cls, html: str) -> str:
         soup = BeautifulSoup(html, 'html.parser')

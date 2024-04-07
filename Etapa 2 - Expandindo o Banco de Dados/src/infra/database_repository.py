@@ -5,7 +5,7 @@ from .database_connector import DatabaseConnector
 class DatabaseRepository():
     '''Classe responsável por fazer o INSERT dos dados no banco de dados'''
     @classmethod
-    def insert_channel(cls, data: Dict):
+    def insert_channel(cls, data: Dict) -> None:
         query='''
             INSERT INTO canais
                 (channel, about, subscriptions, total_videos, total_views, creation_date, channel_location)
@@ -18,9 +18,9 @@ class DatabaseRepository():
         DatabaseConnector.connection.commit()
     
     @classmethod
-    def select_channel(cls):
+    def select_channel(cls) -> None:
         query='''
-                SELECT DISTINCT channel
+                SELECT DISTINCT channel, link
                 FROM videos
             '''
         cursor = DatabaseConnector.connection.cursor()
@@ -31,8 +31,7 @@ class DatabaseRepository():
         information = []
         for tupla in result:
             channel = str(tupla[0])
-            channel = channel.replace(' ', '')
-            link = 'https://www.youtube.com/' + channel
+            link = str(tupla[1])
             information.append({'channel': channel, 'link': link})
 
         return information
