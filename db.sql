@@ -27,7 +27,7 @@ id BIGINT NOT NULL AUTO_INCREMENT,
 channel VARCHAR(255),
 subscriptions VARCHAR(255),
 total_videos INTEGER,
-total_views INTEGER,
+total_views BIGINT,
 extraction_date DATETIME NOT NULL,
 primary key(id)
 )ENGINE=INNODB;
