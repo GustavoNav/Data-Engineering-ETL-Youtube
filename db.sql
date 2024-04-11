@@ -15,17 +15,17 @@ primary key(id)
 CREATE TABLE IF NOT EXISTS `pipeline_db`.`canais_sobre`(
 id BIGINT NOT NULL AUTO_INCREMENT,
 channel VARCHAR(255) UNIQUE,
-about VARCHAR(255) UNIQUE,
+about TEXT,
 creation_date DATETIME,
-channel_location VARCHAR(255)
+channel_location VARCHAR(255),
 extraction_date DATETIME NOT NULL,
 primary key(id)
 )ENGINE=INNODB;
 
 CREATE TABLE IF NOT EXISTS `pipeline_db`.`canais_metricas`(
 id BIGINT NOT NULL AUTO_INCREMENT,
-channel VARCHAR(255) UNIQUE,
-subscriptions INTEGER,
+channel VARCHAR(255),
+subscriptions VARCHAR(255),
 total_videos INTEGER,
 total_views INTEGER,
 extraction_date DATETIME NOT NULL,

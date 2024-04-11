@@ -1,11 +1,12 @@
 import json
 import re
+from datetime import datetime
 from typing import Dict
 from src.errors.transform_error import TransformError
 
 class TransformInformation:
 
-    def tranform(self):
+    def tranform(self) -> None:
         try:
             with open('Etapa 2 - Expandindo o Banco de Dados\\src\\data\\extract_data.json', 'r', encoding='utf-8') as file:
                 data = json.load(file)
@@ -42,7 +43,30 @@ class TransformInformation:
         match = None
         match = re.search(r'<span class=\"\" style=\"\">Inscreveu-se em(.{0,50}?)</span></span></yt-attributed-string>', text,re.DOTALL)
         if match:
-            creation_date = match.group(1)
+            creation_date = match.group(1).strip()
+
+            meses = {
+                'jan': 'Jan',
+                'fev': 'Feb',
+                'mar': 'Mar',
+                'abr': 'Apr',
+                'mai': 'May',
+                'jun': 'Jun',
+                'jul': 'Jul',
+                'ago': 'Aug',
+                'set': 'Sep',
+                'out': 'Oct',
+                'nov': 'Nov',
+                'dez': 'Dec'
+            }
+
+            for mes_pt, mes_en in meses.items():
+                creation_date = creation_date.replace(f"de {mes_pt}.", mes_en)
+
+            creation_date = creation_date.replace(' de', '')
+            creation_date = datetime.strptime(creation_date, "%d %b %Y")
+            creation_date = creation_date.strftime("%Y-%m-%d")
+
             return creation_date
         
         return None
@@ -80,6 +104,7 @@ class TransformInformation:
         match = re.search(r'<td class="style-scope ytd-about-channel-renderer">(.{0,50}?)visualizações</td>', text, re.DOTALL)
         if match:
             total_views = match.group(1).strip()
+            total_views = total_views.replace('.','')
             return total_views
 
         return None
