@@ -12,14 +12,22 @@ extraction_date DATETIME NOT NULL,
 primary key(id)
 ) ENGINE=INNODB;
 
-CREATE TABLE IF NOT EXISTS `pipeline_db`.`canais`(
+CREATE TABLE IF NOT EXISTS `pipeline_db`.`canais_sobre`(
 id BIGINT NOT NULL AUTO_INCREMENT,
 channel VARCHAR(255) UNIQUE,
 about VARCHAR(255) UNIQUE,
+creation_date DATETIME,
+channel_location VARCHAR(255)
+extraction_date DATETIME NOT NULL,
+primary key(id)
+)ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS `pipeline_db`.`canais_metricas`(
+id BIGINT NOT NULL AUTO_INCREMENT,
+channel VARCHAR(255) UNIQUE,
 subscriptions INTEGER,
 total_videos INTEGER,
 total_views INTEGER,
-creation_date DATETIME,
-channel_location VARCHAR(255)
+extraction_date DATETIME NOT NULL,
 primary key(id)
 )ENGINE=INNODB;

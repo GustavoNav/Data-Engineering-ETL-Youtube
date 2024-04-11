@@ -1,8 +1,8 @@
 import time
 import json
+from datetime import date
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from .html_collector import HtmlCollector
 from src.drivers.interfaces.http_requester import HttpRequesterInterface
 from src.drivers.interfaces.html_collector import HtmlCollectorInterface
 from src.infra.database_repository import DatabaseRepository
@@ -16,16 +16,16 @@ class HttpRequester(HttpRequesterInterface):
     def request_from_pages(self, urls: list) -> None:
         browser = webdriver.Firefox()
         
-        file = "src/data/extract_data.json"
+        file = "Etapa 2 - Expandindo o Banco de Dados\src\data\extract_data.json"
         with open(file, "w") as file_json:
             file_json.write('[\n')
 
-        with open(file, "a") as file_json:
+        with open(file, "a", encoding='utf-8') as file_json:
             count = 1
             for dict in urls:
                 channel = dict['channel']
                 url = dict['link']
-            
+
                 browser.get(url)
                 time.sleep(3)
 
@@ -39,9 +39,12 @@ class HttpRequester(HttpRequesterInterface):
                 html = browser.page_source
 
                 about_informations = self.html_collector.collect_essential_information(html)
-                essential_informations = {'channel': channel, 'essential_information': about_informations}
+                extraction_date = date.today()
+                extraction_date_str = extraction_date.strftime('%Y-%m-%d')
 
-                json.dump(essential_informations, file_json)
+                essential_informations = {'channel': channel, 'essential_information': about_informations, 'extraction_date': extraction_date_str}
+
+                json.dump(essential_informations, file_json, ensure_ascii=False, indent=4)
                 if count < len(urls):file_json.write(',\n')
                 count += 1
 
