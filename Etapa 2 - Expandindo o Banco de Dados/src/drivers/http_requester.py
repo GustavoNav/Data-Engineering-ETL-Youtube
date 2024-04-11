@@ -16,7 +16,7 @@ class HttpRequester(HttpRequesterInterface):
     def request_from_pages(self, urls: list) -> None:
         browser = webdriver.Firefox()
         
-        file = "Etapa 2 - Expandindo o Banco de Dados\src\data\extract_data.json"
+        file = "src/data/extract_data.json"
         with open(file, "w") as file_json:
             file_json.write('[\n')
 

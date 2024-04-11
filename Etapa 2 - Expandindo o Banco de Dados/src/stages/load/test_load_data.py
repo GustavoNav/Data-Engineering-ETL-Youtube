@@ -4,8 +4,8 @@ from src.infra.database_connector import DatabaseConnector
 
 
 def test_load_data():
-    database_connector = DatabaseConnector()
-    database_connector.connect()
+    DatabaseConnector.connect()
+ 
     repository = DatabaseRepository()
     load_data = LoadData(repository)
 
