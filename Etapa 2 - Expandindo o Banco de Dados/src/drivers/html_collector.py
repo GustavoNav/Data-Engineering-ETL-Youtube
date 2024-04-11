@@ -10,6 +10,3 @@ class HtmlCollector(HtmlCollectorInterface):
 
 
         return about_informations
-    
-
-  

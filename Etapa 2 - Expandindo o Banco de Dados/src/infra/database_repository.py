@@ -4,7 +4,7 @@ from .database_connector import DatabaseConnector
 from .interfaces.database_repository import DatabaseRepositoryInterface
 
 class DatabaseRepository(DatabaseRepositoryInterface):
-    '''Classe responsável por fazer o INSERT dos dados no banco de dados'''
+    '''Classe responsável por executar comandos ao banco de dados'''
     @classmethod
     def insert_channel_about(cls, data: Dict) -> None:
         query='''

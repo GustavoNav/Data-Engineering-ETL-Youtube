@@ -12,4 +12,3 @@ class ExtractHtml:
 
         except Exception as exception:
             raise ExtractionError(str(exception)) from exception
-        

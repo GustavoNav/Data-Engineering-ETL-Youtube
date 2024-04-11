@@ -36,4 +36,3 @@ class LoadData:
         
         except Exception as exception:
             raise LoadError(str(exception)) from exception
-        

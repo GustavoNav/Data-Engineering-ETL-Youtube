@@ -8,4 +8,3 @@ def test_extract():
     http_requester = HttpRequester(html_collector)
     extractor = ExtractHtml(http_requester)
     extractor.extract()
-    
