@@ -11,12 +11,12 @@ class MainPipeline:
     def __init__(self) -> None:
         self.__html_collecor =  HtmlCollector()
         self.__extract_html = ExtractHtml(HttpRequester(self.__html_collecor))
-        self.__transform_html = TransformInformation()
+        self.__transform_information = TransformInformation()
         self.__load_data = LoadData(DatabaseRepository())
     
     def run_pipeline(self):
         DatabaseConnector.connect()
 
         self.__extract_html.extract()
-        self.__transform_html.tranform()
+        self.__transform_information.tranform()
         self.__load_data.load()
