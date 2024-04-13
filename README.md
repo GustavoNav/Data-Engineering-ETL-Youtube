@@ -6,34 +6,7 @@ O Projeto será divido em Etapas, que serão desenvolvidas e publicadas ao longo
 
 A arquitetura do projeto e ideia foram inspirados no conjunto de aulas de ETL Pipeline do [Programador Lhama](https://www.youtube.com/watch?v=D5mwXMMA0e0&list=PLAgbpJQADBGLuI1oR39tVfELOEZJSSbxQ).
 
-## Funcionalidade
-### Etapa 1 - Web Scraping
-Essa pipeline realiza a extração de dados de videos do '*Em Alta*' do Youtube, realiza transformação no conjunto de dados e então carrega em um banco de Dados.
-
-Diagrama de Classes:
-![alt text](<Etapa 1 - Web Scraping/Diagrama_de_classes_Etapa1.png>)
-
-* Drivers
-
-Local onde os dados do youtube são requisitados, a classe *HttpRequester* faz a requisição, utilizando da biblioteca selenium para abrir o site e então aguardar o carregamento, para recolher todo o html. Em seguida o *HtmlCollector* coleta a informação de interesse do Html, que se refere aos videos.
-
-* Extração
-
-O estágio de extração utiliza da classe *ExtractHTML* para fazer a chamada das classes do Drive, e então devolve as dados em um contrato de extração (namedtuple).
-
-* Transformação
-
-O estágio mais complexo, a classe 'TransformHtml' transforma o HTML, coletando as informações relevantes com a biblioteca re: **Titulo**, **Canal**, **Visualizações**, **Tempo de Video**, **Tempo do lançamento**, **Link**, **Data de Extração**. Então é retornado um contrato de transformação.  
-
-* Carga
-
-O estágio reponsável pela injeção de dados, a classe LoadData utiliza o repositório e connection para inserir o dados ao banco de dados.
-
-* Infra
-
-A classe *DatabaseConnector* é reponsável por fazer a conexão com o banco de dados, e então a *DatabaseRepository* realiza a injeção de dados no banco de dados.
-
-## Como Usar
+## Requisitos
 Projeto executado no Python 3.12, não testado em outras versões.
 
 Primeiro clone o repositório, crie o ambiente virtual, ative o ambiente e instale o requirements.
@@ -64,12 +37,32 @@ id BIGINT NOT NULL AUTO_INCREMENT,
 channel VARCHAR(255),
 title VARCHAR(255),
 link VARCHAR(255),
-views VARCHAR(255),
+views INTEGER,
 video_time VARCHAR(255),
 time_online VARCHAR(255),
 extraction_date DATETIME NOT NULL,
 primary key(id)
 ) ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS `pipeline_db`.`canais_sobre`(
+id BIGINT NOT NULL AUTO_INCREMENT,
+channel VARCHAR(255) UNIQUE,
+about TEXT,
+creation_date DATETIME,
+channel_location VARCHAR(255),
+extraction_date DATETIME NOT NULL,
+primary key(id)
+)ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS `pipeline_db`.`canais_metricas`(
+id BIGINT NOT NULL AUTO_INCREMENT,
+channel VARCHAR(255),
+subscriptions VARCHAR(255),
+total_videos INTEGER,
+total_views BIGINT,
+extraction_date DATETIME NOT NULL,
+primary key(id)
+)ENGINE=INNODB;
 ```
 
 ### Navegador
@@ -79,8 +72,35 @@ primary key(id)
 
 Uma vez instalado é necessário configurar a váriavel de ambiente, adicione o diretório onde o driver está localizado à variável de ambiente PATH do seu sistema operacional.
 
+### Etapa 2 - Expandindo o Banco de Dados
+### Etapa 1 - Web Scraping
+Essa pipeline realiza a extração de dados de videos do '*Em Alta*' do Youtube, realiza transformação no conjunto de dados e então carrega em um banco de Dados.
+
+Diagrama de Classes:
+![alt text](<Etapa 1 - Web Scraping/Diagrama_de_classes_Etapa1.png>)
+
+* Drivers
+
+Local onde os dados do youtube são requisitados, a classe *HttpRequester* faz a requisição, utilizando da biblioteca selenium para abrir o site e então aguardar o carregamento, para recolher todo o html. Em seguida o *HtmlCollector* coleta a informação de interesse do Html, que se refere aos videos.
+
+* Extração
+
+O estágio de extração utiliza da classe *ExtractHTML* para fazer a chamada das classes do Drive, e então devolve as dados em um contrato de extração (namedtuple).
+
+* Transformação
+
+O estágio mais complexo, a classe 'TransformHtml' transforma o HTML, coletando as informações relevantes com a biblioteca re: **Titulo**, **Canal**, **Visualizações**, **Tempo de Video**, **Tempo do lançamento**, **Link**, **Data de Extração**. Então é retornado um contrato de transformação.  
+
+* Carga
+
+O estágio reponsável pela injeção de dados, a classe LoadData utiliza o repositório e connection para inserir o dados ao banco de dados.
+
+* Infra
+
+A classe *DatabaseConnector* é reponsável por fazer a conexão com o banco de dados, e então a *DatabaseRepository* realiza a injeção de dados no banco de dados.
+
 ### Execução
-Por fim, basta acessar o diretório *Etapa 1 - Web Scraping* basta executar o arquivo *run.py*
+Basta acessar o diretório *Etapa 1 - Web Scraping* basta executar o arquivo *run.py*
 
 É esperado que uma aba no firefox seja aberta por 20 segundos para coleta de dados e então fechadado, por fim os dados serão carregados.
 
