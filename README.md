@@ -1,7 +1,7 @@
 # ETL - Youtube
 
 ## Descrição
-Esse é um projeto pessoal para por em pratica conceitos de Data Engineering.
+Esse é um projeto pessoal para por em pratica conceitos de Data Engineering e Data Science.
 O Projeto será divido em Etapas, que serão desenvolvidas e publicadas ao longo do primeiro semestre de 2024.
 
 A arquitetura do projeto e ideia foram inspirados no conjunto de aulas de ETL Pipeline do [Programador Lhama](https://www.youtube.com/watch?v=D5mwXMMA0e0&list=PLAgbpJQADBGLuI1oR39tVfELOEZJSSbxQ).
