@@ -28,7 +28,7 @@ pip install -r ETL-Youtube/requirements.txt
 ```
 
 ### Banco de Dados
-O banco de dados utilizados é Mysql, a conexão foi criada utilizando o DBeaver, detalhes da conexão no arquivo *database_connector*, código para criação do database e tabela diponível no arquivo *db.sql*
+O banco de dados utilizados é Mysql, a conexão foi criada utilizando o DBeaver, detalhes da conexão no arquivo *database_connector*, código para criação do database e das tabelas diponível no arquivo *db.sql*
 ```
 CREATE DATABASE IF NOT EXISTS pipeline_db;
 
@@ -72,7 +72,6 @@ primary key(id)
 
 Uma vez instalado é necessário configurar a váriavel de ambiente, adicione o diretório onde o driver está localizado à variável de ambiente PATH do seu sistema operacional.
 
-### Etapa 2 - Expandindo o Banco de Dados
 ### Etapa 1 - Web Scraping
 Essa pipeline realiza a extração de dados de videos do '*Em Alta*' do Youtube, realiza transformação no conjunto de dados e então carrega em um banco de Dados.
 
@@ -111,7 +110,31 @@ python3 run.py
 
 ### Etapa 2 - Expandindo o Banco de Dados
 Essa etapa tem como objetivo criar um pipeline que coleta informações do banco de dados locais e as utilizada para fazer web scraping, realizar transformações e carregar em uma nova tabela.
+
+Diagrama de Classes:
 ![alt text](<Etapa 2 - Expandindo o Banco de Dados/Diagrama_de_classe_Etapa2.png>)
+
+* Drivers
+
+Diferente da primeira pipeline, os dados já sofrem uma filtragem em tempo de coleta. Com o HttpRepository é realizada uma consulta ao banco de dados, afim de obter o nome dos canais e os links para retornar em forma de lista, então o *HttpRequester* acessa a url de cada canal com o selenium. Ao selecionar o HTML da pagina, o *HtmlCollector* executa uma filtragem, selecionando apenas a parte de interesse. Por fim as informações em HTML são salvas em um arquivo JSON.
+
+* Extração
+
+O estágio de extração utiliza da classe *ExtractHTML* para fazer a chamada das classes do Drive, e então salvar em uma arquivo JSON.
+
+* Transformação
+
+Esse estágio se concentra em localizar e guardar as informações de interesse dos dados, é utilizado REGEX para realizar as buscas. Então as informações são organizadas e salvas em um arquivo JSON. 
+
+* Carga
+
+O estágio reponsável pela injeção de dados, a classe LoadData utiliza o repositório e connection para inserir o dados ao banco de dados, em duas tabelas: *canal_sobre* e *canal_metricas*
+
+* Infra
+
+A classe *DatabaseConnector* é reponsável por fazer a conexão com o banco de dados, e então a *DatabaseRepository* pode fazer comandos SQL, como SELECT e INSERT.
+
+
 
 ## Links Úteis 
 [Python](https://www.python.org/)
