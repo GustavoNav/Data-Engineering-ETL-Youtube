@@ -134,6 +134,16 @@ O estágio reponsável pela injeção de dados, a classe LoadData utiliza o repo
 
 A classe *DatabaseConnector* é reponsável por fazer a conexão com o banco de dados, e então a *DatabaseRepository* pode fazer comandos SQL, como SELECT e INSERT.
 
+### Execução
+Acesse o diretório *Etapa 2 - Expandindo o Banco de Dados* e basta executar o arquivo *run.py*
+
+O Firefox deve ser aberto, em sequência vai acessar os canais e coletar as informações. O processo vai acontecer com todos os canais no banco de dados, então pode demorar até encerrar.
+
+```
+cd Etapa 2 - Etapa 2 - Expandindo o Banco de Dados
+python3 run.py
+```
+
 
 
 ## Links Úteis 
