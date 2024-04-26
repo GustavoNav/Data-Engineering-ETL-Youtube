@@ -8,7 +8,7 @@ class LoadData:
 
     def load(self) -> None:
         try:
-            with open('src/data/transformed_data.json', 'r', encoding='utf-8') as file:
+            with open('Etapa 2 - Expandindo o Banco de Dados\\src\\data\\transformed_data.json', 'r', encoding='utf-8') as file:
                 data = json.load(file)
             
             channel_about = {}

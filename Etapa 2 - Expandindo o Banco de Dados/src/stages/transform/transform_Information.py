@@ -8,14 +8,16 @@ class TransformInformation:
 
     def tranform(self) -> None:
         try:
-            with open('src\\data\\extract_data.json', 'r', encoding='utf-8') as file:
+            local = 'Etapa 2 - Expandindo o Banco de Dados\\src\\data\\transformed_data.json'
+            
+            with open('Etapa 2 - Expandindo o Banco de Dados\src\data\extract_data.json', 'r', encoding='utf-8') as file:
                 data = json.load(file)
 
-            with open('src\\data\\transformed_data.json', 'w', encoding='utf-8') as file:
+            with open(local, 'w', encoding='utf-8') as file:
                 file.write('')
 
             transformed_data = []
-            with open('src\\data\\transformed_data.json', 'a', encoding='utf-8') as file:
+            with open(local, 'a', encoding='utf-8') as file:
                 for channel_informations in data:
                     transformed_data.append(self.__filter(channel_informations))
 

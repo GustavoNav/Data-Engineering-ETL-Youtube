@@ -16,17 +16,21 @@ class HttpRequester(HttpRequesterInterface):
     def request_from_pages(self, urls: list) -> None:
         browser = webdriver.Firefox()
         
-        file = "src/data/extract_data.json"
+        file = "Etapa 2 - Expandindo o Banco de Dados\src\data\extract_data.json"
         with open(file, "w") as file_json:
-            file_json.write('[\n')
+            file_json.write('')
 
         with open(file, "a", encoding='utf-8') as file_json:
-            count = 1
+            data = []
             for dict in urls:
                 channel = dict['channel']
                 url = dict['link']
 
-                browser.get(url)
+                try:
+                    browser.get(url)
+                except:
+                    continue
+
                 time.sleep(3)
 
                 try:
@@ -43,12 +47,10 @@ class HttpRequester(HttpRequesterInterface):
                 extraction_date_str = extraction_date.strftime('%Y-%m-%d')
 
                 essential_informations = {'channel': channel, 'essential_information': about_informations, 'extraction_date': extraction_date_str}
+                data.append(essential_informations)
 
-                json.dump(essential_informations, file_json, ensure_ascii=False, indent=4)
-                if count < len(urls):file_json.write(',\n')
-                count += 1
-
-            file_json.write('\n]')
+            json.dump(data, file_json, ensure_ascii=False, indent=4)
+            
         browser.quit()
         
 
