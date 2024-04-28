@@ -1,0 +1,2 @@
+mock_select_channel =  [{'channel': 'Casal Torcedor React', 'video_link': 'https://www.youtube.com/watch?v=pxJlAGHaR7o'},
+                        {'channel': 'MrBeast', 'video_link': 'https://www.youtube.com/watch?v=Pv0iVoSZzN8'}]
