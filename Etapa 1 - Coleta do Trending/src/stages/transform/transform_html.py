@@ -28,7 +28,8 @@ class TransformHtml:
             transformed_data = {
                 "title": self.__collect_title(data),
                 "channel": self.__collect_channel_name(data),
-                "link": self.__collect_link(data),
+                "channel_link": self.__collect_chanell_link(data),
+                "video_link": self.__collect_video_link(data),
                 "views": self.__collect_views(data),
                 "video_time": self.__collect_video_time(data),
                 "time_online": self.__collect_time_online(data),
@@ -58,7 +59,7 @@ class TransformHtml:
         
         return None
         
-    def __collect_link(self, text):
+    def __collect_chanell_link(self, text):
         match = None
         match = re.search('"><a class="yt-simple-endpoint style-scope yt-formatted-string" href="([^"]*)"', text)
         if match:
@@ -66,7 +67,16 @@ class TransformHtml:
             return href
         
         return None
-
+    
+    def __collect_video_link(self, text):
+        match = None
+        match = re.search('class="yt-simple-endpoint style-scope ytd-video-renderer" href="([^"]*)"', text)
+        if match:
+            href = 'https://www.youtube.com' + match.group(1)      
+            return href
+        
+        return None
+    
     def __collect_views(self, text):
         match = None
         match = re.search(r'(\d{1,3}(?:\.\d{3})*(?:,\d+)?) visualizações', text)
@@ -88,9 +98,9 @@ class TransformHtml:
     
     def __collect_time_online(self, text):
         match = None
-        match = re.search(r'há (.{1,45} segundos)', text)
+        match = re.search(r'há (.{1,50}?)"', text)
         if match:
             time_online = match.group(1)
             return time_online
-        
+            
         return None

@@ -9,9 +9,9 @@ class DatabaseRepository(DatabaseRepositoryInterface):
     def insert_video(cls, data: Dict):
         query='''
             INSERT INTO videos
-                (title, channel, link, views, video_time, time_online, extraction_date)
+                (title, channel, channel_link, video_link, views, video_time, time_online, extraction_date)
             VALUES
-                (%s, %s, %s, %s, %s, %s, %s)
+                (%s, %s, %s, %s, %s, %s, %s, %s)
             '''
         cursor = DatabaseConnector.connection.cursor()
         cursor.execute(query, list(data.values()))

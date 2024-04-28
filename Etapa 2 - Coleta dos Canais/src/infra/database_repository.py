@@ -34,7 +34,7 @@ class DatabaseRepository(DatabaseRepositoryInterface):
     @classmethod
     def select_channel(cls) -> None:
         query='''
-                SELECT DISTINCT channel, link
+                SELECT DISTINCT channel, channel_link
                 FROM videos
             '''
         cursor = DatabaseConnector.connection.cursor()

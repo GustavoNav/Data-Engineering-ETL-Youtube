@@ -8,9 +8,9 @@ class TransformInformation:
 
     def tranform(self) -> None:
         try:
-            local = 'Etapa 2 - Expandindo o Banco de Dados\\src\\data\\transformed_data.json'
+            local = 'src\\data\\transformed_data.json'
             
-            with open('Etapa 2 - Expandindo o Banco de Dados\src\data\extract_data.json', 'r', encoding='utf-8') as file:
+            with open('src\data\extract_data.json', 'r', encoding='utf-8') as file:
                 data = json.load(file)
 
             with open(local, 'w', encoding='utf-8') as file:
@@ -97,6 +97,7 @@ class TransformInformation:
         match = re.search(r'<td class="style-scope ytd-about-channel-renderer">(.{0,50}?)vídeos</td>', text, re.DOTALL)
         if match:
             total_videos = match.group(1).strip()
+            total_videos = total_videos.replace('.', '')
             return total_videos
         
         return None
