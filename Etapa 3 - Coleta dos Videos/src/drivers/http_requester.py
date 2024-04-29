@@ -23,6 +23,7 @@ class HttpRequester():
 
             data = []
             for dict in urls:
+                video_id = dict['video_id']
                 channel = dict['channel']
                 url = dict['video_link']
 
@@ -42,7 +43,7 @@ class HttpRequester():
                 extraction_date = date.today()
                 extraction_date_str = extraction_date.strftime('%Y-%m-%d')
 
-                essential_informations = {'channel': channel, 'essential_information': informations, 'extraction_date': extraction_date_str}
+                essential_informations = {'video_id': video_id,'channel': channel,'extraction_date': extraction_date_str, 'essential_information': informations}
                 data.append(essential_informations)
 
             json.dump(data, file_json, ensure_ascii=False, indent=4)

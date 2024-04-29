@@ -46,6 +46,6 @@ class DatabaseRepository(DatabaseRepositoryInterface):
         for tupla in result:
             channel = str(tupla[0])
             link = str(tupla[1])
-            information.append({'channel': channel, 'link': link})
+            information.append({'channel': channel, 'channel_link': link})
 
         return information

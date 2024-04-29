@@ -5,7 +5,7 @@ class DatabaseRepository:
     @classmethod
     def select_channel(cls) -> None:
         query=f'''
-                SELECT channel, video_link
+                SELECT id, channel, video_link
                 FROM videos
                 WHERE extraction_date = '{date.today()}'
             '''
@@ -16,8 +16,9 @@ class DatabaseRepository:
         
         information = []
         for tupla in result:
-            channel = str(tupla[0])
-            link = str(tupla[1])
-            information.append({'channel': channel, 'video_link': link})
+            video_id = str(tupla[0])
+            channel = str(tupla[1])
+            link = str(tupla[2])
+            information.append({'video_id': video_id,'channel': channel, 'video_link': link})
 
         return information
