@@ -30,10 +30,10 @@ class TransformInformation:
         transformed_data = {
             'video_id': channel_informations['video_id'],
             'channel': channel_informations['channel'],
-            'extraction_date': channel_informations['extraction_date'],   
             'likes': self.__collect_likes(essential_information),
             'total_comments': self.__collect_total_comments(essential_information),
             'tags': self.__collect_tags(essential_information),
+            'extraction_date': channel_informations['extraction_date']
         }
 
         return transformed_data
@@ -61,7 +61,7 @@ class TransformInformation:
         match = None
         match = re.findall(r'#(.{0,30}?)<',text, re.DOTALL)
         if match:
-            comments = match
+            comments = str(match)
             return comments
         
         return None

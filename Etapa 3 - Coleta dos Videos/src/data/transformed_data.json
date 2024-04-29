@@ -2,24 +2,17 @@
     {
         "video_id": "1",
         "channel": "Casal Torcedor React",
-        "extraction_date": "2024-04-28",
         "likes": "8,2 mil",
         "total_comments": "635",
-        "tags": [
-            "palmeiras",
-            "verdão",
-            "libertadores",
-            "react",
-            "reacao",
-            "reagindo"
-        ]
+        "tags": "['palmeiras', 'verdão', 'libertadores', 'react', 'reacao', 'reagindo']",
+        "extraction_date": "2024-04-28"
     },
     {
         "video_id": "2",
         "channel": "MrBeast",
-        "extraction_date": "2024-04-28",
         "likes": "2,5 mi",
         "total_comments": "64.970",
-        "tags": null
+        "tags": null,
+        "extraction_date": "2024-04-28"
     }
 ]
