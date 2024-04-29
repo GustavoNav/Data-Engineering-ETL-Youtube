@@ -24,7 +24,7 @@ class HttpRequester(HttpRequesterInterface):
             data = []
             for dict in urls:
                 channel = dict['channel']
-                url = dict['link']
+                url = dict['channel_link']
 
                 try:
                     browser.get(url)

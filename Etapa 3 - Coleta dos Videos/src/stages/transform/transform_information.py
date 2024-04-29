@@ -7,9 +7,9 @@ class TransformInformation:
 
     def tranform(self) -> None:
         try:
-            local = 'Etapa 3 - Coleta dos Videos\\src\\data\\transformed_data.json'
+            local = 'src\\data\\transformed_data.json'
             
-            with open('Etapa 3 - Coleta dos Videos\\src\\data\\extract_data.json', 'r', encoding='utf-8') as file:
+            with open('src\\data\\extract_data.json', 'r', encoding='utf-8') as file:
                 data = json.load(file)
 
             with open(local, 'w', encoding='utf-8') as file:

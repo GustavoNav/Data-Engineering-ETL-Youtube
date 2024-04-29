@@ -8,7 +8,7 @@ class LoadData:
 
     def load(self) -> None:
         try:
-            with open('Etapa 3 - Coleta dos Videos\\src\\data\\transformed_data.json', 'r', encoding='utf-8') as file:
+            with open('src\\data\\transformed_data.json', 'r', encoding='utf-8') as file:
                 data = json.load(file)
             
             for information in data:
