@@ -1,4 +1,5 @@
 import json
+from src.utils.paths import encontrar_caminho
 from src.infra.interfaces.database_repository import DatabaseRepositoryInterface
 from src.errors.load_error import LoadError
 
@@ -8,7 +9,8 @@ class LoadData:
 
     def load(self) -> None:
         try:
-            with open('src\\data\\transformed_data.json', 'r', encoding='utf-8') as file:
+            tranform_file = encontrar_caminho('export\\transform\\transformed_data.json')
+            with open(tranform_file, 'r', encoding='utf-8') as file:
                 data = json.load(file)
             
             for information in data:

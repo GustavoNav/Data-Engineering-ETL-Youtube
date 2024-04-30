@@ -1,5 +1,6 @@
 import json
 import re
+from src.utils.paths import encontrar_caminho
 from datetime import datetime
 from typing import Dict
 from src.errors.transform_error import TransformError
@@ -8,16 +9,17 @@ class TransformInformation:
 
     def tranform(self) -> None:
         try:
-            local = 'src\\data\\transformed_data.json'
-            
-            with open('src\data\extract_data.json', 'r', encoding='utf-8') as file:
+            extract_file =  encontrar_caminho('export\\extract\\extract_data.json')
+            tranform_file = encontrar_caminho('export\\transform\\transformed_data.json')
+           
+            with open(extract_file, 'r', encoding='utf-8') as file:
                 data = json.load(file)
 
-            with open(local, 'w', encoding='utf-8') as file:
+            with open(tranform_file, 'w', encoding='utf-8') as file:
                 file.write('')
 
             transformed_data = []
-            with open(local, 'a', encoding='utf-8') as file:
+            with open(tranform_file, 'a', encoding='utf-8') as file:
                 for channel_informations in data:
                     transformed_data.append(self.__filter(channel_informations))
 

@@ -2,7 +2,7 @@ import time
 import json
 from datetime import date
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+from src.utils.paths import encontrar_caminho
 from src.infra.database_repository import DatabaseRepository
 from src.infra.database_connector import DatabaseConnector
 from src.drivers.interfaces.html_collector import HtmlCollectorInterface
@@ -15,11 +15,12 @@ class HttpRequester():
     def request_from_pages(self, urls: list) -> None:
         browser = webdriver.Firefox()
         
-        file = "src\\data\\extract_data.json"
-        with open(file, "w") as file_json:
+        extract_file =  encontrar_caminho('export\\extract\\extract_data.json')
+
+        with open(extract_file, "w") as file_json:
             file_json.write('')
 
-        with open(file, "a", encoding='utf-8') as file_json:
+        with open(extract_file, "a", encoding='utf-8') as file_json:
 
             data = []
             for dict in urls:
