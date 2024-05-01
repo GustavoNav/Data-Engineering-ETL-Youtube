@@ -1,1 +1,786 @@
-[]
+[
+    {
+        "video_id": "196",
+        "channel": "GR6 EXPLODE",
+        "likes": "88 mil",
+        "total_comments": "4.474",
+        "tags": "['MCKevin', 'gr6explode']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "197",
+        "channel": "Bauers",
+        "likes": "15 mil",
+        "total_comments": "6.321",
+        "tags": "['salvexinglau', 'bauers', 'salvexinglau', 'bauers', 'minecraft', 'trolagem']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "198",
+        "channel": "Netflix Brasil",
+        "likes": "24 mil",
+        "total_comments": "2.178",
+        "tags": "['t']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "199",
+        "channel": "Kendrick Lamar",
+        "likes": "650 mil",
+        "total_comments": "93.725",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "200",
+        "channel": "Gabriel e Shirley - Games",
+        "likes": "4,1 mil",
+        "total_comments": "317",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "201",
+        "channel": "POD DELAS",
+        "likes": "53 mil",
+        "total_comments": "734",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "202",
+        "channel": "VALORANT // Brasil",
+        "likes": "3,8 mil",
+        "total_comments": "234",
+        "tags": "['VALORANT', 'RIOTGAMES', 'DEFIANCE', 'TAKETHELEAD', 'CONTESTAÇÃO', 'ASSUMAALIDERANÇA']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "203",
+        "channel": "Clash of Clans",
+        "likes": "139 mil",
+        "total_comments": "5.840",
+        "tags": "['clashwithhaaland', 'clashofclans', 'haalandforthewin', 'haaland', 'haalandsong']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "204",
+        "channel": "Bandai Namco Entertainment America",
+        "likes": "63 mil",
+        "total_comments": "4.990",
+        "tags": "['dragonballsparkingzero', 'budokaitenkaichi', 'dbsz']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "205",
+        "channel": "duplacancaoelouvor",
+        "likes": "7,5 mil",
+        "total_comments": "634",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "206",
+        "channel": "Geleia",
+        "likes": "5,9 mil",
+        "total_comments": "1.004",
+        "tags": "['efootball', 'fcfuteboldecasa', 'efootball', 'fcfuteboldecasa']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "207",
+        "channel": "Enaldinho",
+        "likes": "35 mil",
+        "total_comments": "1.717",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "208",
+        "channel": "Corinthians TV",
+        "likes": "21 mil",
+        "total_comments": "933",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "209",
+        "channel": "OMAD",
+        "likes": "4,2 mil",
+        "total_comments": "399",
+        "tags": "['roblox\\u200b', 'robloxbrasil\\u200b', 'robloxmemes\\u200b', 'robloxmusicas', 'omad', 'Brookhaven']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "210",
+        "channel": "Jazzghost",
+        "likes": "43 mil",
+        "total_comments": "3.221",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "211",
+        "channel": "LOUD VALORANT",
+        "likes": "18 mil",
+        "total_comments": "419",
+        "tags": "['VALORANT', 'LOUD', 'LOUDValorant']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "212",
+        "channel": "Invento na Hora",
+        "likes": "20 mil",
+        "total_comments": "458",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "213",
+        "channel": "Kanye West",
+        "likes": "65 mil",
+        "total_comments": "3.705",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "214",
+        "channel": "STUDIO CHOOM [스튜디오 춤]",
+        "likes": "108 mil",
+        "total_comments": "4.464",
+        "tags": "['IVE', '아이브', 'BEORIGINAL', 'STUDIOCHOOM']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "215",
+        "channel": "Botafogo TV",
+        "likes": "11 mil",
+        "total_comments": "630",
+        "tags": "['Bastidores', 'Botafogo', 'Bastidores', 'Botafogo', 'Glorioso', 'Flamengo', 'BotafogoTV', 'Glorioso', 'BotafogoTV\\u200b']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "216",
+        "channel": "Ana Zambrin",
+        "likes": "4,9 mil",
+        "total_comments": "144",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "217",
+        "channel": "Jovem Pan Esportes",
+        "likes": "9,6 mil",
+        "total_comments": "660",
+        "tags": "['JovemPan', 'BatePronto']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "218",
+        "channel": "Brawl Stars",
+        "likes": "247 mil",
+        "total_comments": "9.367",
+        "tags": "['Godzilla', 'Godzilla', 'MUTATIONS', 'BrawlStars']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "219",
+        "channel": "Kelly Raiany ",
+        "likes": "8,2 mil",
+        "total_comments": "1.216",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "220",
+        "channel": "컴퍼니수수 Company Soosoo",
+        "likes": "158 mil",
+        "total_comments": "30.553",
+        "tags": "['도경수', 'Dohkyungsoo', 'Popcorn', '도경수', 'Dohkyungsoo', 'Popcorn']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "221",
+        "channel": "STARSHIP",
+        "likes": "509 mil",
+        "total_comments": "55.315",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "222",
+        "channel": "Regis Tadeu",
+        "likes": "12 mil",
+        "total_comments": "1.259",
+        "tags": "['Slipknot', 'Sepultura', 'RegisTadeu']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "223",
+        "channel": "Ben Azelart",
+        "likes": "89 mil",
+        "total_comments": "6.236",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "224",
+        "channel": "ge",
+        "likes": "11 mil",
+        "total_comments": "1.071",
+        "tags": "['brasileirão', 'sãopaulo', 'palmeiras']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "225",
+        "channel": "ge",
+        "likes": "51 mil",
+        "total_comments": "2.660",
+        "tags": "['Brasileirão', 'corinthians', 'fluminense']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "226",
+        "channel": "Walt Disney Studios BR",
+        "likes": "5,4 mil",
+        "total_comments": null,
+        "tags": "['Mufasa', 'OReiLeão', 'Mufasa', 'OReiLeão']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "227",
+        "channel": "Emilly Vick",
+        "likes": "Gostei",
+        "total_comments": "3.454",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "228",
+        "channel": "Canal Ana Hickmann",
+        "likes": "15 mil",
+        "total_comments": "1.386",
+        "tags": "['anahickmann', 'vlog', 'eduguedes']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "229",
+        "channel": "ESPN Brasil",
+        "likes": "39 mil",
+        "total_comments": "965",
+        "tags": "['LALIGA', 'Barcelona', 'Valencia']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "230",
+        "channel": "Flubancada",
+        "likes": "4,1 mil",
+        "total_comments": "339",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "231",
+        "channel": "Enygma",
+        "likes": "47 mil",
+        "total_comments": "2.760",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "232",
+        "channel": "Street Fighter",
+        "likes": "51 mil",
+        "total_comments": "4.458",
+        "tags": "['StreetFighter', 'Capcom', 'Akuma']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "233",
+        "channel": "Câmeras Escondidas Programa Silvio Santos",
+        "likes": "4,7 mil",
+        "total_comments": "154",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "234",
+        "channel": "Jazzghost",
+        "likes": "63 mil",
+        "total_comments": "2.839",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "235",
+        "channel": "VALORANT Esports BR",
+        "likes": "7 mil",
+        "total_comments": "10",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "236",
+        "channel": "Billie Eilish",
+        "likes": "41 mil",
+        "total_comments": "2.604",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "237",
+        "channel": "Domingo Legal",
+        "likes": "2,9 mil",
+        "total_comments": "142",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "238",
+        "channel": "FREITAS",
+        "likes": "33 mil",
+        "total_comments": "966",
+        "tags": "['freefiremobile', 'freitas', 'garena', 'proplayer', 'freefirehighlights', 'battleroyale', 'freefiredicas', 'mestre', 'desafiante', 'ranqueada']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "239",
+        "channel": "Aviões e Músicas",
+        "likes": "28 mil",
+        "total_comments": "434",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "240",
+        "channel": "CBLOL",
+        "likes": "3,9 mil",
+        "total_comments": "26",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "241",
+        "channel": "MrBeast",
+        "likes": "2,9 mi",
+        "total_comments": "71.318",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "242",
+        "channel": "Adeline Camargo",
+        "likes": "23 mil",
+        "total_comments": "845",
+        "tags": "['adelinecamargo']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "243",
+        "channel": "Emilly Vick",
+        "likes": "33 mil",
+        "total_comments": "2.743",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "244",
+        "channel": "Meu Timão",
+        "likes": "5,5 mil",
+        "total_comments": "337",
+        "tags": "['Corinthians', 'Timao', 'MeuTimao']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "245",
+        "channel": "Décimo 14",
+        "likes": "13 mil",
+        "total_comments": "593",
+        "tags": "['Cross', 'Décimo14', 'Eujoguei', 'Cross', 'Futebolbrasileiro', 'Corinthians']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "246",
+        "channel": "Mari Fernandez",
+        "likes": "23 mil",
+        "total_comments": "3.947",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "247",
+        "channel": "NAGALLI ",
+        "likes": "41 mil",
+        "total_comments": "697",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "248",
+        "channel": "Mainstreet Records",
+        "likes": "60 mil",
+        "total_comments": "26.239",
+        "tags": "['tropadoflamengo', 'tropadoflamengo']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "249",
+        "channel": "MrBeast",
+        "likes": "2,9 mi",
+        "total_comments": "71.325",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "250",
+        "channel": "GR6 EXPLODE",
+        "likes": "66 mil",
+        "total_comments": "5.019",
+        "tags": "['ninoabravanel']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "251",
+        "channel": "Ryu, The Runner",
+        "likes": "108 mil",
+        "total_comments": "20.144",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "252",
+        "channel": "THE BOX",
+        "likes": "142 mil",
+        "total_comments": "6.533",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "253",
+        "channel": "Marvel Brasil",
+        "likes": "150 mil",
+        "total_comments": "5.136",
+        "tags": "['DeadpoolEWolverine', 'DeadpoolEWolverine']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "254",
+        "channel": "Ben Azelart",
+        "likes": "89 mil",
+        "total_comments": "6.244",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "255",
+        "channel": "Geleia",
+        "likes": "37 mil",
+        "total_comments": "2.517",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "256",
+        "channel": "Anitta",
+        "likes": "100 mil",
+        "total_comments": "11.460",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "257",
+        "channel": "Nadson O Ferinha Oficial",
+        "likes": "12 mil",
+        "total_comments": "350",
+        "tags": "['NadsonOFerinha', 'Vibezinha']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "258",
+        "channel": "ge",
+        "likes": "51 mil",
+        "total_comments": "2.663",
+        "tags": "['Brasileirão', 'corinthians', 'fluminense']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "259",
+        "channel": "ESPN Brasil",
+        "likes": "165 mil",
+        "total_comments": "5.865",
+        "tags": "['melhoresmoments', 'realmadrid', 'barcelona']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "260",
+        "channel": "MrBeast",
+        "likes": "4,5 mi",
+        "total_comments": "192.949",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "261",
+        "channel": "João Gomes Cantor",
+        "likes": "24 mil",
+        "total_comments": "1.542",
+        "tags": "['joaogomes', 'coraçãodevaqueiro', 'iguinhoelulinha', 'tarcísiodoacordeon']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "262",
+        "channel": "HYBE LABELS",
+        "likes": "1,5 mi",
+        "total_comments": "98.813",
+        "tags": "['ZICO', '지코', 'JENNIE', '제니', 'SPOT', '스팟']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "263",
+        "channel": "Enygma",
+        "likes": "47 mil",
+        "total_comments": "2.763",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "264",
+        "channel": "Gusttavo Lima Oficial",
+        "likes": "45 mil",
+        "total_comments": "877",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "265",
+        "channel": "Evoney Fernandes",
+        "likes": "16 mil",
+        "total_comments": "903",
+        "tags": "['EvoneyFernandes', 'evoneyfernandes', 'tigresa']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "266",
+        "channel": "Léo e Raphael",
+        "likes": "10 mil",
+        "total_comments": "247",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "267",
+        "channel": "Guilherme Silva Oficial",
+        "likes": "5,5 mil",
+        "total_comments": "217",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "268",
+        "channel": "Brawl Stars",
+        "likes": "247 mil",
+        "total_comments": "9.367",
+        "tags": "['Godzilla', 'Godzilla', 'MUTATIONS', 'BrawlStars']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "269",
+        "channel": "NBA Brasil",
+        "likes": "41 mil",
+        "total_comments": "29",
+        "tags": "['NBABrasil', 'NBAPlayoffs', 'NBAaovivo']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "270",
+        "channel": "Geleia",
+        "likes": "6 mil",
+        "total_comments": "1.006",
+        "tags": "['efootball', 'fcfuteboldecasa', 'efootball', 'fcfuteboldecasa']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "271",
+        "channel": "Bauers",
+        "likes": "15 mil",
+        "total_comments": "6.400",
+        "tags": "['salvexinglau', 'bauers', 'salvexinglau', 'bauers', 'minecraft', 'trolagem']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "272",
+        "channel": "g1",
+        "likes": "28 mil",
+        "total_comments": "6.035",
+        "tags": "['g1', 'notícias', 'fantástico', 'g1', 'notícias', 'fantástico', 'g1', 'notícias']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "273",
+        "channel": "Gabriel e Shirley - Games",
+        "likes": "10 mil",
+        "total_comments": "1.094",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "274",
+        "channel": "Netflix Brasil",
+        "likes": "25 mil",
+        "total_comments": "2.203",
+        "tags": "['t']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "275",
+        "channel": "Nadson O Ferinha Oficial",
+        "likes": "25 mil",
+        "total_comments": "1.035",
+        "tags": "['NãoVouFalarNada', 'vibezinhadoferinha', 'leosantana', 'Sofrencia', 'NãoVouFalarNada', 'NadsonOFerinha', 'Vibezinha']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "276",
+        "channel": "Madison Beer",
+        "likes": "474 mil",
+        "total_comments": "11.295",
+        "tags": "['MadisonBeer', 'MakeYouMine']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "277",
+        "channel": "Thiago e Samuel - Os Parazim",
+        "likes": "7,6 mil",
+        "total_comments": "4.811",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "278",
+        "channel": "Manu Bahtidão",
+        "likes": "10 mil",
+        "total_comments": "1.822",
+        "tags": "['ManuBahtidao', 'Dependente']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "279",
+        "channel": "Lucas Rangel",
+        "likes": "40 mil",
+        "total_comments": "725",
+        "tags": "['lucasrangel']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "280",
+        "channel": "VALORANT Esports BR",
+        "likes": "7 mil",
+        "total_comments": "10",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "281",
+        "channel": "Henrique Nemes",
+        "likes": "23 mil",
+        "total_comments": "1.043",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "282",
+        "channel": "CBLOL",
+        "likes": "33 mil",
+        "total_comments": "157",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "283",
+        "channel": "Desimpedidos",
+        "likes": "95 mil",
+        "total_comments": "5.756",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "284",
+        "channel": "Invento na Hora",
+        "likes": "20 mil",
+        "total_comments": "459",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "285",
+        "channel": "OMAD",
+        "likes": "4,2 mil",
+        "total_comments": "399",
+        "tags": "['roblox\\u200b', 'robloxbrasil\\u200b', 'robloxmemes\\u200b', 'robloxmusicas', 'omad', 'Brookhaven']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "286",
+        "channel": "Ei Nerd",
+        "likes": "88 mil",
+        "total_comments": "2.310",
+        "tags": "['Deadpool', 'Wolverine', 'Marvel', 'Deadpool', 'Wolverine', 'Marvel']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "287",
+        "channel": "IZALICK ",
+        "likes": "40 mil",
+        "total_comments": "3.317",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "288",
+        "channel": "DaFuq!?Boom!",
+        "likes": "1,1 mi",
+        "total_comments": "91.089",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "289",
+        "channel": "Gabriel e Shirley - Games",
+        "likes": "4,2 mil",
+        "total_comments": "320",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "290",
+        "channel": "MotoPLAY",
+        "likes": "8,5 mil",
+        "total_comments": "1.129",
+        "tags": "['novapop', 'hondapop110i', 'pop2025', 'pop110i', 'pop110', 'hondapop110i', 'MOTOPLAY']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "291",
+        "channel": "Aviões e Músicas",
+        "likes": "28 mil",
+        "total_comments": "435",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "292",
+        "channel": "Regis Tadeu",
+        "likes": "12 mil",
+        "total_comments": "1.262",
+        "tags": "['Slipknot', 'Sepultura', 'RegisTadeu']",
+        "extraction_date": "2024-04-30"
+    },
+    {
+        "video_id": "293",
+        "channel": "Vivziepop",
+        "likes": "479 mil",
+        "total_comments": "32.585",
+        "tags": null,
+        "extraction_date": "2024-04-30"
+    }
+]

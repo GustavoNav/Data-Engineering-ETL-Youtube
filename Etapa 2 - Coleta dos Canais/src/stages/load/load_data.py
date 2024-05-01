@@ -15,19 +15,24 @@ class LoadData:
             
             channel_about = {}
             channel_metrics = {}
+
             for channel_information in data:
 
-                channel_about['channel'] = channel_information['channel']
-                channel_about['about'] = channel_information['about']
-                channel_about['creation_date'] = channel_information['creation_date']
-                channel_about['channel_location'] = channel_information['channel_location']
-                channel_about['extraction_date'] = channel_information['extraction_date']
+                channel_about ={
+                    'channel': channel_information['channel'],
+                    'about': channel_information['about'],
+                    'creation_date': channel_information['creation_date'],
+                    'channel_location': channel_information['channel_location'],
+                    'extraction_date': channel_information['extraction_date']
+                }
 
-                channel_metrics['channel'] = channel_information['channel']
-                channel_metrics['subscriptions'] = channel_information['subscriptions']
-                channel_metrics['total_videos']= channel_information['total_videos']
-                channel_metrics['total_views']= channel_information['total_views']
-                channel_metrics['extraction_date']= channel_information['extraction_date']
+                channel_about ={
+                    'channel': channel_information['channel'],
+                    'subscriptions': channel_information['subscriptions'],
+                    'total_videos': channel_information['total_videos'],
+                    'total_views': channel_information['total_views'],
+                    'extraction_date': channel_information['extraction_date']
+                }
 
                 try:
                     self.__repository.insert_channel_about(channel_about)
