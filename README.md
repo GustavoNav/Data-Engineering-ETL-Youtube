@@ -90,7 +90,7 @@ Uma vez instalado é necessário configurar a váriavel de ambiente, adicione o 
 Essa pipeline realiza a extração de dados de videos do '*Em Alta*' do Youtube, realiza transformação no conjunto de dados e então carrega em um banco de Dados.
 
 Diagrama de Classes:
-![alt text](<Etapa 1 - Coleta do Trending/Diagrama_de_classes_Etapa1.png>)
+![diagrama 1](<Etapa 1 - Coleta do Trending/Diagrama_de_classes_Etapa1.png>)
 
 * Drivers
 
@@ -126,7 +126,7 @@ python3 run.py
 Essa etapa tem como objetivo criar um pipeline que coleta informações do banco de dados locais e as utilizada para fazer web scraping, realizar transformações e carregar em uma nova tabela.
 
 Diagrama de Classes:
-![alt text](<Etapa 2 - Coleta dos Canais/Diagrama_de_classe_Etapa2.png>)
+![diagrama 2](<Etapa 2 - Coleta dos Canais/diagrama_de_classe_Etapa2.png>)
 
 * Drivers
 
