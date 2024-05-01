@@ -29,6 +29,7 @@ pip install -r ETL-Youtube/requirements.txt
 
 ### Banco de Dados
 O banco de dados utilizados é Mysql, a conexão foi criada utilizando o DBeaver, detalhes da conexão no arquivo *database_connector*, código para criação do database e das tabelas diponível no arquivo *db.sql*
+![alt text](modelo_bd.png)
 ```
 CREATE DATABASE IF NOT EXISTS pipeline_db;
 
@@ -36,8 +37,9 @@ CREATE TABLE IF NOT EXISTS `pipeline_db`.`videos`(
 id BIGINT NOT NULL AUTO_INCREMENT,
 channel VARCHAR(255),
 title VARCHAR(255),
-link VARCHAR(255),
-views INTEGER,
+channel_link VARCHAR(255),
+video_link VARCHAR(255),
+views BIGINT,
 video_time VARCHAR(255),
 time_online VARCHAR(255),
 extraction_date DATETIME NOT NULL,
@@ -63,6 +65,18 @@ total_views BIGINT,
 extraction_date DATETIME NOT NULL,
 primary key(id)
 )ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS `pipeline_db`.`videos_detalhes`(
+id BIGINT NOT NULL AUTO_INCREMENT,
+video_id BIGINT,
+channel VARCHAR(255),
+likes VARCHAR(255),
+total_comments VARCHAR(255),
+tags TEXT,
+extraction_date DATETIME NOT NULL,
+primary key(id),
+FOREIGN KEY (`video_id`) REFERENCES `pipeline_db`.`videos`(`id`)
+)ENGINE=INNODB;
 ```
 
 ### Navegador
@@ -72,11 +86,11 @@ primary key(id)
 
 Uma vez instalado é necessário configurar a váriavel de ambiente, adicione o diretório onde o driver está localizado à variável de ambiente PATH do seu sistema operacional.
 
-### Etapa 1 - Web Scraping
+### Etapa 1 - Coleta do Trending
 Essa pipeline realiza a extração de dados de videos do '*Em Alta*' do Youtube, realiza transformação no conjunto de dados e então carrega em um banco de Dados.
 
 Diagrama de Classes:
-![alt text](<Etapa 1 - Web Scraping/Diagrama_de_classes_Etapa1.png>)
+![alt text](<Etapa 1 - Coleta do Trending/Diagrama_de_classes_Etapa1.png>)
 
 * Drivers
 
@@ -108,11 +122,11 @@ cd Etapa 1 - Web Scraping
 python3 run.py
 ```
 
-### Etapa 2 - Expandindo o Banco de Dados
+### Etapa 2 - Coleta dos Canais
 Essa etapa tem como objetivo criar um pipeline que coleta informações do banco de dados locais e as utilizada para fazer web scraping, realizar transformações e carregar em uma nova tabela.
 
 Diagrama de Classes:
-![alt text](<Etapa 2 - Expandindo o Banco de Dados/Diagrama_de_classe_Etapa2.png>)
+![alt text](<Etapa 2 - Coleta dos Canais/Diagrama_de_classe_Etapa2.png>)
 
 * Drivers
 
@@ -120,7 +134,7 @@ Diferente da primeira pipeline, os dados já sofrem uma filtragem em tempo de co
 
 * Extração
 
-O estágio de extração utiliza da classe *ExtractHTML* para fazer a chamada das classes do Drive, e então salvar em uma arquivo JSON.
+O estágio de extração utiliza da classe *ExtractHTML* para fazer a chamada das classes do Drive, e então salvar em um arquivo JSON.
 
 * Transformação
 
@@ -144,6 +158,9 @@ cd Etapa 2 - Etapa 2 - Expandindo o Banco de Dados
 python3 run.py
 ```
 
+### Etapa 3 - Coleta dos Videos
+
+Essa etapa segue a mesma estrutura da etapa 2, a unica mudança é que os dados coletados são referentes ao videos.
 
 
 ## Links Úteis 
